@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Church Atlas</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
+  <link rel="stylesheet" href="styles.css?v=20260912-2" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Church search filters">
+        <header class="brand-bar">
+          <div>
+            <p class="eyebrow">GIS church finder</p>
+            <h1>Church Atlas</h1><p style="font-size:12px;line-height:1.5;margin:8px 0 0">Portfolio demo · Sample listings, not a verified directory. Saved items and suggestions stay in this browser.</p><a href="/" style="font-size:14px;display:inline-block;margin-top:8px">← Back to portfolio</a>
+          </div>
+          <button class="icon-button" id="locateBtn" type="button" aria-label="Use current location" title="Use current location">
+            <i data-lucide="crosshair"></i>
+          </button>
+        </header>
+
+        <section class="search-block" aria-label="Location search">
+          <label for="locationSearch">Location</label>
+          <div class="search-row">
+            <input id="locationSearch" type="search" placeholder="City, state, or address" autocomplete="street-address" />
+            <button class="icon-button strong" id="searchBtn" type="button" aria-label="Search location" title="Search location">
+              <i data-lucide="search"></i>
+            </button>
+          </div>
+          <div class="radius-row">
+            <label for="radiusRange">Radius</label>
+            <input id="radiusRange" type="range" min="5" max="150" value="125" step="5" />
+            <output id="radiusValue" for="radiusRange">125 mi</output>
+          </div>
+          <label class="switch-row" for="favoritesOnly">
+            <input id="favoritesOnly" type="checkbox" />
+            <span>Favorites only</span>
+          </label>
+          <label class="switch-row" for="verifiedOnly">
+            <input id="verifiedOnly" type="checkbox" />
+            <span>Verified listings only</span>
+          </label>
+        </section>
+
+        <section class="filter-block" aria-label="Denomination filters">
+          <div class="section-title">
+            <h2>Denominational Family</h2>
+            <button class="text-button" id="clearFamiliesBtn" type="button">Clear</button>
+          </div>
+          <div class="chip-grid" id="familyFilters"></div>
+        </section>
+
+        <section class="filter-block" aria-label="Practical filters">
+          <div class="section-title">
+            <h2>Visit Needs</h2>
+            <button class="text-button" id="clearPracticalBtn" type="button">Clear</button>
+          </div>
+          <div class="chip-grid compact-grid" id="practicalFilters"></div>
+        </section>
+
+        <section class="filter-block" aria-label="Service time filters">
+          <div class="section-title">
+            <h2>Service Times</h2>
+            <button class="text-button" id="clearServiceBtn" type="button">Clear</button>
+          </div>
+          <div class="chip-grid compact-grid" id="serviceFilters"></div>
+        </section>
+
+        <section class="filter-block compact" aria-label="Belief filters">
+          <div class="section-title">
+            <h2>Beliefs & Practice</h2>
+            <button class="text-button" id="clearBeliefsBtn" type="button">Clear</button>
+          </div>
+          <div class="tab-list" role="tablist" aria-label="Belief filter groups">
+            <button class="tab-button active" type="button" data-tab="core" role="tab" aria-selected="true">Core</button>
+            <button class="tab-button" type="button" data-tab="sacraments" role="tab" aria-selected="false">Sacraments</button>
+            <button class="tab-button" type="button" data-tab="worship" role="tab" aria-selected="false">Worship</button>
+            <button class="tab-button" type="button" data-tab="ethics" role="tab" aria-selected="false">Ethics</button>
+          </div>
+          <div id="beliefFilters"></div>
+          <div class="match-mode" aria-label="Belief match mode">
+            <span>Match mode</span>
+            <div class="mini-toggle">
+              <button class="segmented active" type="button" data-match-mode="all">Require all</button>
+              <button class="segmented" type="button" data-match-mode="best">Best fit</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="compare-section" id="compareTray" aria-label="Church comparison" hidden></section>
+        <section class="planner-section" id="visitPlanner" aria-label="Visit planner" hidden></section>
+      </aside>
+
+      <section class="map-stage" aria-label="Map and results">
+        <div id="map" aria-label="Church map"></div>
+        <div class="top-panel">
+          <div class="result-count">
+            <span id="resultCount">0</span>
+            <span>matches</span>
+          </div>
+          <div class="map-controls">
+            <div class="view-toggle" aria-label="Map color mode">
+              <button class="segmented active" type="button" data-map-color="family">Family</button>
+              <button class="segmented" type="button" data-map-color="source">Source</button>
+            </div>
+            <div class="view-toggle" aria-label="Result sort">
+              <button class="segmented active" type="button" data-sort="distance">Distance</button>
+              <button class="segmented" type="button" data-sort="match">Match</button>
+            </div>
+          </div>
+        </div>
+        <section class="active-filter-bar" id="activeFilters" aria-label="Active filters" hidden></section>
+        <section class="results-panel" aria-label="Matching churches">
+          <div class="results-header">
+            <h2>Nearby Churches</h2>
+            <button class="icon-button" id="resetBtn" type="button" aria-label="Reset filters" title="Reset filters">
+              <i data-lucide="rotate-ccw"></i>
+            </button>
+          </div>
+          <div id="resultsList" class="results-list"></div>
+        </section>
+        <section class="detail-panel" id="detailPanel" aria-label="Church profile" hidden></section>
+      </section>
+    </main>
+
+    <section class="modal-backdrop" id="updateModal" aria-label="Suggest listing update" hidden>
+      <form class="update-modal" id="updateForm">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Listing Update</p>
+            <h2 id="updateChurchName">Suggest a correction</h2>
+          </div>
+          <button class="icon-button" type="button" id="closeUpdateModal" aria-label="Close update form" title="Close">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <input id="updateChurchId" name="churchId" type="hidden" />
+        <label>
+          <span>Update type</span>
+          <select id="updateType" name="updateType">
+            <option value="service-times">Service times</option>
+            <option value="belief-profile">Belief profile</option>
+            <option value="visit-info">Visit info</option>
+            <option value="source">Source / verification</option>
+            <option value="closed-moved">Closed or moved</option>
+          </select>
+        </label>
+        <label>
+          <span>Source URL</span>
+          <input id="updateSource" name="sourceUrl" type="url" placeholder="https://church.example/update" />
+        </label>
+        <label>
+          <span>Notes</span>
+          <textarea id="updateNotes" name="notes" rows="4" placeholder="What should change, and how do you know?"></textarea>
+        </label>
+        <button class="submit-button" type="submit">
+          <i data-lucide="send"></i>
+          <span>Save suggestion</span>
+        </button>
+        <p class="modal-status" id="updateStatus" role="status"></p>
+      </form>
+    </section>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="app.js?v=20260912-2"></script>
+  </body>
+</html>
+
