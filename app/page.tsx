@@ -12,6 +12,13 @@ export default function Home() {
   <section id="about" className="about wrap" aria-labelledby="about-title">
     <div className="about-photo"><img src="/images/cole-jorgensen.jpeg" alt="Cole Jorgensen wearing a dark suit and tie" width={3024} height={4032} loading="eager" fetchPriority="high" /></div>
     <div className="about-copy"><div className="eyebrow">BEHIND THE PROJECTS</div><h2 id="about-title">About me</h2><p className="about-lead">I’m Cole Jorgensen. I bring maps, data, and application development together to explore how people connect with places.</p><p>My work spans GIS analysis, interactive storytelling, and practical web applications. Through projects like JobFinder and Church Atlas, I explore how location can help people find opportunities and communities.</p><p>I also use ArcGIS StoryMaps to communicate geographic and environmental topics, from terrain and housing growth in Knoxville to the Everglade snail kite in Florida.</p><div className="tags"><span>Geographic information systems</span><span>Web applications</span><span>Interactive storytelling</span></div></div>
+      <div className="education" aria-labelledby="education-title">
+      <h3 id="education-title">Education</h3>
+      <div className="education-grid">
+        <article className="education-entry"><p className="education-date">Expected May 2027</p><h4>University of Tennessee, Knoxville</h4><p className="education-degree">Bachelor of Science in Geographic Information Science and Technology</p><p><strong>Relevant coursework:</strong> GEOG 312 GIS Programming; GEOG 454 Terrain Analysis</p><p><strong>Academic focus:</strong> Spatial data analysis and programming for environmental, terrain, and urban applications.</p></article>
+        <article className="education-entry"><p className="education-date">June 2022 – December 2025</p><h4>Florida International University</h4><p className="education-degree">Coursework in Crime Science</p><p>Minor in Political Science</p><p>GPA: 3.5</p></article>
+      </div>
+    </div>
   </section>
   <section className="intro wrap" aria-labelledby="intro-title"><div className="eyebrow"><span className="dot"/> GIS · APPLICATIONS · STORYTELLING</div><h1 id="intro-title">A sense of place.<br/><span>A world of possibility.</span></h1><div className="intro-bottom"><p>I’m Cole Jorgensen. I use maps, data, and software to explore places and build useful tools.</p><a className="work-link" href="#work">Explore my work <ArrowDown size={20}/></a></div></section>
   <section id="work" className="work wrap" aria-labelledby="work-title"><div className="section-heading"><h2 id="work-title">Selected work</h2><span>01 — 04</span></div>
@@ -22,6 +29,7 @@ export default function Home() {
   <footer className="footer wrap"><div><strong>Cole Jorgensen</strong><p>Maps, software, and stories.</p></div><a href="https://github.com/colejorgensen28" target="_blank" rel="noreferrer">Find me on GitHub <ArrowUpRight size={17}/></a></footer>
  </>;
 }
+
 
 
 
