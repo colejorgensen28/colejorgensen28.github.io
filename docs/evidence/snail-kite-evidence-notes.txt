@@ -1,0 +1,51 @@
+THE EVERGLADE SNAIL KITE
+Portfolio evidence and attribution notes
+
+StoryMap and map composition: Cole Jorgensen.
+Context: individual Spring 2026 project for GEOG 311 Geovisualization and
+Geographic Information Science, University of Tennessee, Knoxville.
+The original StoryMap was first published on April 1, 2026.
+
+Evidence: snail-kite-critical-habitat.png, 2400 x 1500 pixels.
+This is a static rendering of Cole's saved species-focused web map using
+Esri's standard public Export Web Map Task. It preserves the layer filter,
+symbology, basemap, and attribution. It uses the source services available
+when rendered; it does not preserve a frozen April 2026 data snapshot.
+The map and these notes are stored in Cole's personal GitHub repository,
+with separate local copies in the portfolio working folder.
+
+DESCRIPTION AND INTERPRETATION
+Dark red fill with a darker outline shows final designated critical habitat
+for the Everglade snail kite. The saved map filters the USFWS layer to
+comname = 'Everglade snail kite'. Beige land, pale blue water, and city labels
+provide context. Highlighted areas appear along part of Lake Okeechobee,
+inland from southeastern coastal cities, and in smaller patches farther north.
+Unshaded areas do not prove species absence or unsuitable habitat. This is
+not the complete species range, an estimate of abundance, or a nest map.
+
+AUTHORSHIP AND ATTRIBUTION
+Cole selected the species view and composed the map and StoryMap.
+The underlying habitat boundaries are agency data, not Cole's fieldwork.
+Critical habitat: U.S. Fish and Wildlife Service, 'Critical Habitat for
+Threatened and Endangered Species', shared by Esri_US_Federal_Data.
+License: Creative Commons Attribution 4.0.
+https://creativecommons.org/licenses/by/4.0/
+The source layer was filtered by species and rendered for this portfolio.
+
+Source item: https://www.arcgis.com/home/item.html?id=9d0965dae6a64f38b1af80c2f7ea2efe
+Source layer: https://services.arcgis.com/QVENGdaPbd4LUkLV/arcgis/rest/services/USFWS_Critical_Habitat/FeatureServer/0
+
+Basemap credits retained in the image: Sources: Esri, TomTom, Garmin, FAO,
+NOAA, USGS, (c) OpenStreetMap contributors, and the GIS User Community;
+Esri, CGIAR, USGS. Keep the printed attribution visible when displaying it.
+
+ORIGINAL WORK AND INFORMATION SOURCES
+StoryMap: https://storymaps.arcgis.com/stories/651b5e42fbf14de0bf85e3101c221870
+Saved map: https://www.arcgis.com/home/item.html?id=7c9d5a736d2e4534b803baa6a8806735
+USFWS species reference: https://ecos.fws.gov/ecp/species/7713
+FWC species reference: https://myfwc.com/wildlifehabitats/profiles/birds/raptors-and-vultures/everglade-snail-kite/
+
+The original interactive StoryMap is hosted through UTK ArcGIS. This image
+and explanation preserve the essential viewable evidence independently of
+university access. The rendered map does not include third-party wildlife
+photography from the original story.

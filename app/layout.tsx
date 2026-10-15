@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 export const metadata: Metadata = {
  title: 'Cole Jorgensen | GIS, Applications & Storytelling',
- description: 'Cole Jorgensen’s GIS portfolio: Knoxville terrain and housing suitability analysis, Church Atlas, and JobFinder. Explore project stories, evidence, and web mapping prototypes.',
+ description: 'Explore Cole Jorgensen’s GIS projects: Knoxville housing suitability, the Everglade snail kite StoryMap, Church Atlas, and JobFinder. Open visual covers for stories, evidence, and demos.',
  icons: { icon: '/favicon.svg' },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
