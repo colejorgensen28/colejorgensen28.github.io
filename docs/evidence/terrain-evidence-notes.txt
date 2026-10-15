@@ -1,0 +1,45 @@
+KNOXVILLE'S URBAN GROWTH BASED ON TERRAIN
+Portfolio evidence and attribution notes
+
+Analysis, maps, and original StoryMap: Cole Jorgensen.
+Context: individual Spring 2026 project for GEOG 454 GIS for Terrain Analysis,
+University of Tennessee, Knoxville.
+
+Evidence file: knoxville-housing-suitability.png (2400 x 1500 pixels).
+This is a static map rendering, not a copy of the underlying GIS raster.
+The original analytical raster has 30-metre resolution; the PNG's pixel
+dimensions do not increase the analysis resolution.
+
+The map image was rendered through Esri's standard public Export Web Map
+Task using the final suitability, roads, and boundary layers from Cole's
+published final web map. No stock photography or basemap is included.
+The image and these notes are stored in Cole's personal GitHub repository,
+with a separate local copy retained in the portfolio working folder.
+
+MAP DESCRIPTION
+The black outline shows the irregular Knoxville study boundary. Gray lines
+show streets. The continuous red-yellow-green display represents lower to
+higher relative modeled suitability. Most displayed modeled areas are green;
+lower-suitability red areas appear in narrower patches, including along parts
+of the river corridor. White areas have no displayed suitability result.
+The colors are not five discrete suitability classes. Input factors were
+scored on a 1-5 scale; the published final raster reports values from 2 to 5.
+The map supports discussion of a course model. It does not approve parcels,
+predict development, or replace site-specific planning investigations.
+
+PROJECT DATA SOURCES
+USGS 3DEP elevation: https://www.usgs.gov/3d-elevation-program
+U.S. Census Bureau TIGER/Line roads and water: https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
+Microsoft Building Footprints: https://github.com/microsoft/USBuildingFootprints
+FEMA National Flood Hazard Layer: https://www.fema.gov/flood-maps/national-flood-hazard-layer
+Esri / USGS National Land Cover Database: https://www.mrlc.gov/
+City of Knoxville boundary: https://www.knoxvilletn.gov/
+Knoxville-Knox County Planning zoning: https://knoxplanning.org/
+KGIS: https://www.kgis.org/
+
+ORIGINAL WORK
+StoryMap: https://storymaps.arcgis.com/stories/38c29a40909d4fcd8070e5e6805f54a2
+Final web map: https://www.arcgis.com/home/item.html?id=2a0829d63e9d43d4a057abe72abeaa30
+These original interactive materials are hosted through UTK ArcGIS. The
+personally hosted static image and explanation preserve the essential
+portfolio evidence independently of university access.
