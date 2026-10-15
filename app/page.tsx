@@ -25,7 +25,7 @@ export default function Home() {
         <div className="project-gallery">
           <ProjectDisclosure id="terrain" number="01" category="GIS / URBAN PLANNING" title="Knoxville’s Urban Growth Based on Terrain"
             description="An individual Spring 2026 GEOG 454 project combining terrain and planning factors to investigate housing suitability."
-            cover="/evidence/knoxville-housing-suitability.png" coverAlt="Knoxville housing suitability map with a green and red model surface, roads, and the city boundary."
+            cover="/evidence/knoxville-housing-suitability.png" coverAlt="Knoxville housing suitability map with a green and red model surface, roads, and the city boundary." coverWidth={2400} coverHeight={1500}
             tags={['ArcGIS Pro', 'Terrain analysis', 'Suitability modeling']}>
 <div className="professional-story">
             <section aria-labelledby="terrain-context"><h4 id="terrain-context">Context and purpose</h4><p>Knoxville’s terrain creates both opportunities and constraints for housing growth. For my Spring 2026 terrain-analysis project, I investigated how slope, access to roads and existing development, environmental constraints, land cover, and zoning could be combined to identify relatively suitable areas. My goal was to build a transparent spatial model and communicate what it could tell a planning audience.</p></section>
@@ -50,7 +50,7 @@ export default function Home() {
 
           <ProjectDisclosure id="snail-kite" number="02" category="GEOVISUALIZATION / WILDLIFE" title="The Everglade Snail Kite"
             description="An individual Spring 2026 GEOG 311 StoryMap connecting a wildlife narrative with a species-focused critical-habitat map."
-            cover="/evidence/snail-kite-critical-habitat.png" coverAlt="Map of peninsular Florida with designated Everglade snail kite critical habitat highlighted in dark red."
+            cover="/evidence/snail-kite-critical-habitat.png" coverAlt="Map of peninsular Florida with designated Everglade snail kite critical habitat highlighted in dark red." coverWidth={2400} coverHeight={1500}
             tags={['ArcGIS StoryMaps', 'Web mapping', 'Geographic communication']}>
             <p className="project-lead">Giving an ecological story a geographic context.</p>
             <div className="professional-story">

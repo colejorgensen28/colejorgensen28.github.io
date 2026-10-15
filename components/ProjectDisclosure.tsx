@@ -10,6 +10,8 @@ type ProjectDisclosureProps = {
   description: string;
   cover: string;
   coverAlt: string;
+  coverWidth?: number;
+  coverHeight?: number;
   tags: string[];
   children: ReactNode;
 };
@@ -22,6 +24,8 @@ export default function ProjectDisclosure({
   description,
   cover,
   coverAlt,
+  coverWidth = 1280,
+  coverHeight = 720,
   tags,
   children,
 }: ProjectDisclosureProps) {
@@ -41,7 +45,7 @@ export default function ProjectDisclosure({
     >
       <summary className="project-summary" aria-labelledby={`${id}-title`}>
         <div className="project-cover">
-          <img className="cover-image" src={cover} alt={coverAlt} width={1280} height={720} loading="lazy" />
+          <img className="cover-image" src={cover} alt={coverAlt} width={coverWidth} height={coverHeight} loading="lazy" />
         </div>
         <div className="project-summary-copy">
           <p className="project-category"><span>{number}</span><span aria-hidden="true"> / </span>{category}</p>
