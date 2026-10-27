@@ -27,6 +27,7 @@ export default function Home() {
           <p>My work spans GIS analysis, interactive storytelling, and practical web applications. Through terrain analysis, wildlife storytelling, Church Atlas, and JobFinder, I explore how location can support planning, explain environmental topics, and help people find communities and opportunities.</p>
           <p>I’m interested in GIS analysis and web mapping roles where I can turn spatial data into clear explanations and useful tools. This portfolio is intended for GIS employers, internship supervisors, and professionals working in planning and spatial application development.</p>
           <div className="tags"><span>Geographic information systems</span><span>Web applications</span><span>Interactive storytelling</span></div>
+          <p className="resume-link"><a className="primary-link" href="/resume/cole-jorgensen-resume.pdf" download>Download my résumé (PDF) <ArrowDown size={19} /></a></p>
         </div>
         <div className="education" aria-labelledby="education-title">
           <h3 id="education-title">Education</h3><div className="education-grid">
@@ -62,7 +63,7 @@ export default function Home() {
             <div className="evidence-links"><a className="text-link" href="/evidence/knoxville-housing-suitability.png" download>Download map evidence <ArrowDown size={17} /></a><a className="text-link" href={terrainStory} target="_blank" rel="noreferrer">Read the original StoryMap <ArrowUpRight size={17} /></a></div>
             <p className="project-note">The original interactive StoryMap is hosted through UTK ArcGIS. The map image and explanation on this page are stored separately in my personal GitHub repository.</p>
           </figure>
-            
+
           </ProjectDisclosure>
 
           <ProjectDisclosure id="snail-kite" number="02" category="GEOVISUALIZATION / WILDLIFE" title="The Everglade Snail Kite"
@@ -85,7 +86,7 @@ export default function Home() {
               <figcaption><strong>Everglade snail kite critical habitat in Florida.</strong> Static rendering of the map accompanying my Spring 2026 StoryMap. I selected the species-specific view and composed the map and story; the underlying habitat boundaries are USFWS data. This export uses the source services available when rendered and is not a frozen April 2026 dataset snapshot.</figcaption>
               <details className="evidence-description"><summary>Map description and source credits</summary><p>Dark red areas show designated critical habitat over a beige land and pale blue water basemap. Highlighted areas appear along part of Lake Okeechobee, inland wetlands west of the southeastern coastal cities, and smaller inland patches farther north. Unshaded areas do not establish that the species is absent or that habitat is unsuitable.</p><p>Critical habitat data: U.S. Fish and Wildlife Service, shared by Esri_US_Federal_Data under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">Creative Commons Attribution 4.0</a>, filtered to the Everglade snail kite. Basemap credits printed in the image include Esri, TomTom, Garmin, FAO, NOAA, USGS, OpenStreetMap contributors, the GIS User Community, and CGIAR. <a href="/evidence/snail-kite-evidence-notes.txt">Read the complete evidence and attribution notes</a>.</p></details>
               <div className="evidence-links"><a className="text-link" href="/evidence/snail-kite-critical-habitat.png" download>Download map evidence <ArrowDown size={17} /></a><a className="text-link" href="https://storymaps.arcgis.com/stories/651b5e42fbf14de0bf85e3101c221870" target="_blank" rel="noreferrer">Read the original StoryMap <ArrowUpRight size={17} /></a></div>
-              
+
             </figure>
           </ProjectDisclosure>
 
