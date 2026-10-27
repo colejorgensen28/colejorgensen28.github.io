@@ -31,7 +31,7 @@ export default function Home() {
         </div>
         <div className="education" aria-labelledby="education-title">
           <h3 id="education-title">Education</h3><div className="education-grid">
-            <article className="education-entry"><p className="education-date">Expected May 2027</p><h4>University of Tennessee, Knoxville</h4><p className="education-degree">Bachelor of Science in Geographic Information Science and Technology</p><p><strong>Relevant coursework:</strong> GEOG 311 Geovisualization and Geographic Information Science; GEOG 312 GIS Programming; GEOG 454 GIS for Terrain Analysis</p><p><strong>Academic focus:</strong> Spatial data analysis and programming for environmental, terrain, and urban applications.</p></article>
+            <article className="education-entry"><p className="education-date">Expected May 2027</p><h4>University of Tennessee, Knoxville</h4><p className="education-degree">Bachelor of Science in Geographic Information Science and Technology</p><p><strong>Relevant coursework:</strong> Geovisualization and Geographic Information Science; GIS Programming; GIS for Terrain Analysis</p><p><strong>Academic focus:</strong> Spatial data analysis and programming for environmental, terrain, and urban applications.</p></article>
             <article className="education-entry"><p className="education-date">June 2022 – December 2025</p><h4>Florida International University</h4><p className="education-degree">Coursework in Crime Science</p><p>Minor in Political Science</p><p>GPA: 3.5</p></article>
           </div>
         </div>
