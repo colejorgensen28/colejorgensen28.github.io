@@ -251,3 +251,9 @@
     transition: none;
   }
 }
+
+.portfolio-plan { margin: 0 0 48px; padding: clamp(20px, 4vw, 36px); border: 1px solid var(--border); background: white; }
+.portfolio-plan h3 { font-size: 1.375rem; margin: 0 0 16px; }
+.portfolio-plan p, .portfolio-plan li { color: #425b62; max-width: 85ch; }
+.portfolio-plan ul { padding-left: 24px; }
+.portfolio-plan li + li { margin-top: 14px; }
