@@ -10,13 +10,30 @@ export default function Home() {
     <a className="skip-link" href="#main">Skip to main content</a>
     <header className="header wrap">
       <a href="#home" className="identity" aria-label="Cole Jorgensen home"><span className="monogram">CJ<span>↗</span></span><span>Cole Jorgensen</span></a>
-      <nav aria-label="Main navigation"><a href="#home">Home</a><a href="#work">Projects</a><a href="#about">About</a><a href="#connect">Connect</a></nav>
+      <nav aria-label="Main navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#work">Projects</a><a href="#connect">Connect</a></nav>
     </header>
     <main id="main">
       <section id="home" className="intro wrap" aria-labelledby="intro-title">
         <div className="eyebrow"><span className="dot" /> GIS · APPLICATIONS · STORYTELLING</div>
         <h1 id="intro-title">A sense of place.<br /><span>A world of possibility.</span></h1>
         <div className="intro-bottom"><p>I’m Cole Jorgensen. I use maps, data, and software to explore places and build useful tools.</p><a className="work-link" href="#work">Explore my work <ArrowDown size={20} /></a></div>
+      </section>
+
+      <section id="about" className="about wrap" aria-labelledby="about-title">
+        <div className="about-photo"><img src="/images/cole-jorgensen.jpeg" alt="Cole Jorgensen wearing a dark suit and tie" width={3024} height={4032} loading="lazy" /></div>
+        <div className="about-copy">
+          <div className="eyebrow">BEHIND THE PROJECTS</div><h2 id="about-title">About me</h2>
+          <p className="about-lead">I bring maps, data, and application development together to explore how people connect with places.</p>
+          <p>My work spans GIS analysis, interactive storytelling, and practical web applications. Through terrain analysis, wildlife storytelling, Church Atlas, and JobFinder, I explore how location can support planning, explain environmental topics, and help people find communities and opportunities.</p>
+          <p>I’m interested in GIS analysis and web mapping roles where I can turn spatial data into clear explanations and useful tools. This portfolio is intended for GIS employers, internship supervisors, and professionals working in planning and spatial application development.</p>
+          <div className="tags"><span>Geographic information systems</span><span>Web applications</span><span>Interactive storytelling</span></div>
+        </div>
+        <div className="education" aria-labelledby="education-title">
+          <h3 id="education-title">Education</h3><div className="education-grid">
+            <article className="education-entry"><p className="education-date">Expected May 2027</p><h4>University of Tennessee, Knoxville</h4><p className="education-degree">Bachelor of Science in Geographic Information Science and Technology</p><p><strong>Relevant coursework:</strong> GEOG 311 Geovisualization and Geographic Information Science; GEOG 312 GIS Programming; GEOG 454 GIS for Terrain Analysis</p><p><strong>Academic focus:</strong> Spatial data analysis and programming for environmental, terrain, and urban applications.</p></article>
+            <article className="education-entry"><p className="education-date">June 2022 – December 2025</p><h4>Florida International University</h4><p className="education-degree">Coursework in Crime Science</p><p>Minor in Political Science</p><p>GPA: 3.5</p></article>
+          </div>
+        </div>
       </section>
 
       <section id="work" className="work wrap" aria-labelledby="work-title">
@@ -45,7 +62,7 @@ export default function Home() {
             <div className="evidence-links"><a className="text-link" href="/evidence/knoxville-housing-suitability.png" download>Download map evidence <ArrowDown size={17} /></a><a className="text-link" href={terrainStory} target="_blank" rel="noreferrer">Read the original StoryMap <ArrowUpRight size={17} /></a></div>
             <p className="project-note">The original interactive StoryMap is hosted through UTK ArcGIS. The map image and explanation on this page are stored separately in my personal GitHub repository.</p>
           </figure>
-            <p className="project-note"><strong>Next evidence:</strong> A workflow excerpt explaining the factor scores and weighting decisions.</p>
+            
           </ProjectDisclosure>
 
           <ProjectDisclosure id="snail-kite" number="02" category="GEOVISUALIZATION / WILDLIFE" title="The Everglade Snail Kite"
@@ -68,7 +85,7 @@ export default function Home() {
               <figcaption><strong>Everglade snail kite critical habitat in Florida.</strong> Static rendering of the map accompanying my Spring 2026 StoryMap. I selected the species-specific view and composed the map and story; the underlying habitat boundaries are USFWS data. This export uses the source services available when rendered and is not a frozen April 2026 dataset snapshot.</figcaption>
               <details className="evidence-description"><summary>Map description and source credits</summary><p>Dark red areas show designated critical habitat over a beige land and pale blue water basemap. Highlighted areas appear along part of Lake Okeechobee, inland wetlands west of the southeastern coastal cities, and smaller inland patches farther north. Unshaded areas do not establish that the species is absent or that habitat is unsuitable.</p><p>Critical habitat data: U.S. Fish and Wildlife Service, shared by Esri_US_Federal_Data under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">Creative Commons Attribution 4.0</a>, filtered to the Everglade snail kite. Basemap credits printed in the image include Esri, TomTom, Garmin, FAO, NOAA, USGS, OpenStreetMap contributors, the GIS User Community, and CGIAR. <a href="/evidence/snail-kite-evidence-notes.txt">Read the complete evidence and attribution notes</a>.</p></details>
               <div className="evidence-links"><a className="text-link" href="/evidence/snail-kite-critical-habitat.png" download>Download map evidence <ArrowDown size={17} /></a><a className="text-link" href="https://storymaps.arcgis.com/stories/651b5e42fbf14de0bf85e3101c221870" target="_blank" rel="noreferrer">Read the original StoryMap <ArrowUpRight size={17} /></a></div>
-              <p className="project-note"><strong>Next evidence:</strong> An annotated StoryMap excerpt showing how the narrative, map, and source credits work together.</p>
+              
             </figure>
           </ProjectDisclosure>
 
@@ -76,47 +93,19 @@ export default function Home() {
             description="A geographic search interface for exploring sample church listings, comparing profiles, and planning a visit."
             cover="/images/church-atlas-cover.jpg" coverAlt="Church Atlas interface with location and denomination filters, a map of sample listings, and nearby church cards."
             tags={['JavaScript', 'Leaflet', 'Web GIS', 'Interface design']}>
-            <div className="prototype-overview"><h4>Exploring communities through location</h4><p>Church Atlas combines an interactive map with structured filters to help visitors explore sample church listings. Users can search an area, adjust a geographic radius, filter by denomination and visit needs, compare profiles, and save favorites and a visit plan in their browser.</p><p><strong>Skills demonstrated:</strong> Geographic filtering, organizing categorical data, JavaScript interface development, and building an interactive web map with Leaflet.</p><a className="primary-link" href="/church-atlas/">Open Church Atlas demo <ArrowUpRight size={19} /></a><p className="project-note">The prototype uses sample listings and illustrative source-status labels. Favorites and visit plans are stored locally in the browser.</p><h4>Evidence and next steps</h4><p>The cover screenshot shows the actual prototype’s filters, sample markers, search radius, and results. Interface by Cole Jorgensen; map rendered with Leaflet, © OpenStreetMap contributors. The application source is stored in my personal GitHub repository.</p><p><a className="text-link" href="/images/church-atlas-cover.jpg" target="_blank" rel="noreferrer">View full screenshot <ArrowUpRight size={17} /></a></p><p className="project-note"><strong>Planned evidence:</strong> An annotated screenshot and short code excerpt explaining the distance and filtering logic.</p></div>
+            <div className="prototype-overview"><h4>Exploring communities through location</h4><p>Church Atlas combines an interactive map with structured filters to help visitors explore sample church listings. Users can search an area, adjust a geographic radius, filter by denomination and visit needs, compare profiles, and save favorites and a visit plan in their browser.</p><p><strong>Skills demonstrated:</strong> Geographic filtering, organizing categorical data, JavaScript interface development, and building an interactive web map with Leaflet.</p><a className="primary-link" href="/church-atlas/">Open Church Atlas demo <ArrowUpRight size={19} /></a><p className="project-note">The prototype uses sample listings and illustrative source-status labels. Favorites and visit plans are stored locally in the browser.</p><h4>Evidence</h4><p>The cover screenshot shows the actual prototype’s filters, sample markers, search radius, and results. Interface by Cole Jorgensen; map rendered with Leaflet, © OpenStreetMap contributors. The application source is stored in my personal GitHub repository.</p><p><a className="text-link" href="/images/church-atlas-cover.jpg" target="_blank" rel="noreferrer">View full screenshot <ArrowUpRight size={17} /></a></p></div>
           </ProjectDisclosure>
 
           <ProjectDisclosure id="jobfinder-project" number="04" category="PYTHON / PROTOTYPE" title="JobFinder"
             description="A location-aware job-search prototype with map exploration, search filters, and commute and job-fit information."
             cover="/images/jobfinder-cover.jpg" coverAlt="JobFinder prototype map showing sample job markers and geographic search controls."
             tags={['Python', 'Streamlit', 'GIS', 'Application development']}>
-            <div className="prototype-overview"><h4>The job search, with location in focus</h4><p>JobFinder is a Python and Streamlit prototype for exploring jobs on a map, narrowing results with filters, and comparing opportunities with commute and job-fit information.</p><p><strong>Skills demonstrated:</strong> Python application development, location-based information design, and turning search criteria into an interactive workflow.</p><a className="primary-link" href={demo} target="_blank" rel="noreferrer">Open JobFinder demo <ArrowUpRight size={19} /></a><p className="project-note">Prototype with demonstration data. Opens on Streamlit; the free demo may need to wake after inactivity.</p><h4>Evidence and next steps</h4><p>The cover screenshot records the running prototype’s map interface with sample job locations. The screenshot is stored on my personal portfolio so it remains viewable when the demo is asleep. Application by Cole Jorgensen; map attribution appears in the screenshot and includes CARTO and OpenStreetMap contributors.</p><p><a className="text-link" href="/images/jobfinder-cover.jpg" target="_blank" rel="noreferrer">View full screenshot <ArrowUpRight size={17} /></a></p><p className="project-note"><strong>Planned evidence:</strong> An annotated explanation of the map and filters plus a focused code excerpt showing how location-based search works.</p></div>
+            <div className="prototype-overview"><h4>The job search, with location in focus</h4><p>JobFinder is a Python and Streamlit prototype for exploring jobs on a map, narrowing results with filters, and comparing opportunities with commute and job-fit information.</p><p><strong>Skills demonstrated:</strong> Python application development, location-based information design, and turning search criteria into an interactive workflow.</p><a className="primary-link" href={demo} target="_blank" rel="noreferrer">Open JobFinder demo <ArrowUpRight size={19} /></a><p className="project-note">Prototype with demonstration data. Opens on Streamlit; the free demo may need to wake after inactivity.</p><h4>Evidence</h4><p>The cover screenshot records the running prototype’s map interface with sample job locations. The screenshot is stored on my personal portfolio so it remains viewable when the demo is asleep. Application by Cole Jorgensen; map attribution appears in the screenshot and includes CARTO and OpenStreetMap contributors.</p><p><a className="text-link" href="/images/jobfinder-cover.jpg" target="_blank" rel="noreferrer">View full screenshot <ArrowUpRight size={17} /></a></p></div>
           </ProjectDisclosure>
         </div>
 
-        <section className="portfolio-plan" aria-labelledby="portfolio-plan-title">
-          <h3 id="portfolio-plan-title">Building the complete portfolio</h3>
-          <p>Four examples are available above. I’m developing a six-to-eight-example portfolio that shows GIS analysis, application development, and geographic communication.</p>
-          <ul>
-            <li><strong>Develop the current examples:</strong> Expand Church Atlas and JobFinder into complete professional stories with annotated screenshots and focused code excerpts. Add the terrain model’s factor scores, weights, and a comparison of alternative weights.</li>
-            <li><strong>Planned example 5 — GIS programming:</strong> Select a GEOG 312 programming artifact, explain the problem and my contribution, and include a short code excerpt with a sample input and output.</li>
-            <li><strong>Planned example 6 — Remote sensing:</strong> Develop an example from the ongoing Hurricane Helene landscape-change project after checking my individual contribution and available results. Include an attributed workflow or map and distinguish completed analysis from proposed methods.</li>
-            <li><strong>Possible examples 7–8:</strong> Select additional work only when it demonstrates a distinct skill and has shareable evidence. Each added example will include context, contribution, results, reflection, a caption, and a text description of visual evidence.</li>
-          </ul>
-          <p className="project-note">The planned examples are in development. A résumé download will be added to About after the résumé portion of the course.</p>
-        </section>
       </section>
 
-
-      <section id="about" className="about wrap" aria-labelledby="about-title">
-        <div className="about-photo"><img src="/images/cole-jorgensen.jpeg" alt="Cole Jorgensen wearing a dark suit and tie" width={3024} height={4032} loading="lazy" /></div>
-        <div className="about-copy">
-          <div className="eyebrow">BEHIND THE PROJECTS</div><h2 id="about-title">About me</h2>
-          <p className="about-lead">I bring maps, data, and application development together to explore how people connect with places.</p>
-          <p>My work spans GIS analysis, interactive storytelling, and practical web applications. Through terrain analysis, wildlife storytelling, Church Atlas, and JobFinder, I explore how location can support planning, explain environmental topics, and help people find communities and opportunities.</p>
-          <p>I’m interested in GIS analysis and web mapping roles where I can turn spatial data into clear explanations and useful tools. This portfolio is intended for GIS employers, internship supervisors, and professionals working in planning and spatial application development.</p>
-          <div className="tags"><span>Geographic information systems</span><span>Web applications</span><span>Interactive storytelling</span></div>
-        </div>
-        <div className="education" aria-labelledby="education-title">
-          <h3 id="education-title">Education</h3><div className="education-grid">
-            <article className="education-entry"><p className="education-date">Expected May 2027</p><h4>University of Tennessee, Knoxville</h4><p className="education-degree">Bachelor of Science in Geographic Information Science and Technology</p><p><strong>Relevant coursework:</strong> GEOG 311 Geovisualization and Geographic Information Science; GEOG 312 GIS Programming; GEOG 454 GIS for Terrain Analysis</p><p><strong>Academic focus:</strong> Spatial data analysis and programming for environmental, terrain, and urban applications.</p></article>
-            <article className="education-entry"><p className="education-date">June 2022 – December 2025</p><h4>Florida International University</h4><p className="education-degree">Coursework in Crime Science</p><p>Minor in Political Science</p><p>GPA: 3.5</p></article>
-          </div>
-        </div>
-      </section>
 
       <section id="connect" className="connect wrap" aria-labelledby="connect-title"><div><div className="eyebrow">LET’S CONNECT</div><h2 id="connect-title">Connect</h2><p>Interested in GIS, web mapping, or spatial application development? Visit my GitHub profile to explore my portfolio repository and connect with my work.</p></div><a className="primary-link" href="https://github.com/colejorgensen28" target="_blank" rel="noreferrer">Find me on GitHub <ArrowUpRight size={19} /></a></section>
     </main>
