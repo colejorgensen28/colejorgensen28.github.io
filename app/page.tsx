@@ -38,10 +38,22 @@ export default function Home() {
       </section>
 
       <section id="work" className="work wrap" aria-labelledby="work-title">
-        <div className="section-heading"><h2 id="work-title">Projects</h2><span>04 / SELECTED WORK</span></div>
+        <div className="section-heading"><h2 id="work-title">Projects</h2><span>05 / SELECTED WORK</span></div>
         <p className="gallery-intro">Choose a cover to explore the story, evidence, and tools behind each project.</p>
         <div className="project-gallery">
-          <ProjectDisclosure id="terrain" number="01" category="GIS / URBAN PLANNING" title="Knoxville’s Urban Growth Based on Terrain"
+          <ProjectDisclosure id="resilience-atlas" number="01" category="GIS / COMMUNITY RESILIENCE" title="East Tennessee Resilience Atlas"
+            description="An interactive study of where social vulnerability, distance to hospitals, and flood-loss potential overlap across 33 East Tennessee counties and 618 census tracts."
+            cover="/images/east-tennessee-atlas.jpg" coverAlt="East Tennessee county map with Monroe County selected in the combined priority view."
+            tags={['Spatial analysis', 'Python', 'Leaflet']}>
+            <div className="prototype-overview">
+              <h4>Which counties stand out when access to hospitals gets more weight?</h4>
+              <p>I combined CDC social vulnerability data, mapped hospital locations, and FEMA inland-flood loss scores. Monroe County ranked first under both sets of weights. Its county center lies 27.7 km from the nearest mapped hospital by straight-line distance. Hamilton moved from third to fifth when I increased the weight on hospital distance.</p>
+              <p>Explore the county and tract maps, compare model assumptions, or download the evidence behind a ranking. County-center distances describe geographic proximity. Individual travel times and hospital capacity require separate evidence.</p>
+              <a className="primary-link" href="https://east-tennessee-resilience-atlas.colejorgensen28.chatgpt.site/#research">Explore the atlas findings <ArrowUpRight size={19} /></a>
+            </div>
+          </ProjectDisclosure>
+
+          <ProjectDisclosure id="terrain" number="02" category="GIS / URBAN PLANNING" title="Knoxville’s Urban Growth Based on Terrain"
             description="An individual Spring 2026 GEOG 454 project combining terrain and planning factors to investigate housing suitability."
             cover="/evidence/knoxville-housing-suitability.png" coverAlt="Knoxville housing suitability map with a green and red model surface, roads, and the city boundary." coverWidth={2400} coverHeight={1500}
             tags={['ArcGIS Pro', 'Terrain analysis', 'Suitability modeling']}>
@@ -66,7 +78,7 @@ export default function Home() {
 
           </ProjectDisclosure>
 
-          <ProjectDisclosure id="snail-kite" number="02" category="GEOVISUALIZATION / WILDLIFE" title="The Everglade Snail Kite"
+          <ProjectDisclosure id="snail-kite" number="03" category="GEOVISUALIZATION / WILDLIFE" title="The Everglade Snail Kite"
             description="An individual Spring 2026 GEOG 311 StoryMap connecting a wildlife narrative with a species-focused critical-habitat map."
             cover="/evidence/snail-kite-critical-habitat.png" coverAlt="Map of peninsular Florida with designated Everglade snail kite critical habitat highlighted in dark red." coverWidth={2400} coverHeight={1500}
             tags={['ArcGIS StoryMaps', 'Web mapping', 'Geographic communication']}>
@@ -90,14 +102,14 @@ export default function Home() {
             </figure>
           </ProjectDisclosure>
 
-          <ProjectDisclosure id="church-atlas-project" number="03" category="WEB MAPPING / PROTOTYPE" title="Church Atlas"
+          <ProjectDisclosure id="church-atlas-project" number="04" category="WEB MAPPING / PROTOTYPE" title="Church Atlas"
             description="A geographic search interface for exploring sample church listings, comparing profiles, and planning a visit."
             cover="/images/church-atlas-cover.jpg" coverAlt="Church Atlas interface with location and denomination filters, a map of sample listings, and nearby church cards."
             tags={['JavaScript', 'Leaflet', 'Web GIS', 'Interface design']}>
             <div className="prototype-overview"><h4>Exploring communities through location</h4><p>Church Atlas combines an interactive map with structured filters to help visitors explore sample church listings. Users can search an area, adjust a geographic radius, filter by denomination and visit needs, compare profiles, and save favorites and a visit plan in their browser.</p><p><strong>Skills demonstrated:</strong> Geographic filtering, organizing categorical data, JavaScript interface development, and building an interactive web map with Leaflet.</p><a className="primary-link" href="/church-atlas/">Open Church Atlas demo <ArrowUpRight size={19} /></a><p className="project-note">The prototype uses sample listings and illustrative source-status labels. Favorites and visit plans are stored locally in the browser.</p><h4>Evidence</h4><p>The cover screenshot shows the actual prototype’s filters, sample markers, search radius, and results. Interface by Cole Jorgensen; map rendered with Leaflet, © OpenStreetMap contributors. The application source is stored in my personal GitHub repository.</p><p><a className="text-link" href="/images/church-atlas-cover.jpg" target="_blank" rel="noreferrer">View full screenshot <ArrowUpRight size={17} /></a></p></div>
           </ProjectDisclosure>
 
-          <ProjectDisclosure id="jobfinder-project" number="04" category="PYTHON / PROTOTYPE" title="JobFinder"
+          <ProjectDisclosure id="jobfinder-project" number="05" category="PYTHON / PROTOTYPE" title="JobFinder"
             description="A location-aware job-search prototype with interactive job markers, road-route estimates, and commute comparisons."
             cover="/images/jobfinder-cover.jpg" coverAlt="JobFinder prototype map showing sample job markers and geographic search controls."
             tags={['Python', 'Streamlit', 'GIS', 'Application development']}>
