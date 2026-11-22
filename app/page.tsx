@@ -49,7 +49,7 @@ export default function Home() {
               <h4>Which counties stand out when access to hospitals gets more weight?</h4>
               <p>I combined CDC social vulnerability data, mapped hospital locations, and FEMA inland-flood loss scores. Monroe County ranked first under both sets of weights. Its county center lies 27.7 km from the nearest mapped hospital by straight-line distance. Hamilton moved from third to fifth when I increased the weight on hospital distance.</p>
               <p>Explore the county and tract maps, compare model assumptions, or download the evidence behind a ranking. County-center distances describe geographic proximity. Individual travel times and hospital capacity require separate evidence.</p>
-              <a className="primary-link" href="https://east-tennessee-resilience-atlas.colejorgensen28.chatgpt.site/#research">Explore the atlas findings <ArrowUpRight size={19} /></a>
+              <a className="primary-link" href="/east-tennessee-atlas/#research">Explore the atlas findings <ArrowUpRight size={19} /></a>
             </div>
           </ProjectDisclosure>
 
